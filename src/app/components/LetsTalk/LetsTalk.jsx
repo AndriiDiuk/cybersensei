@@ -54,7 +54,7 @@ const LetsTalk = ({ timeline }) => {
       <ContentWrapper>
         <AnimateMoveUp>
           <Subtitle>
-            Whether it's{" "}
+            Whether it&apos;s{" "}
             <b>
               healthcare, e-commerce, logistics, education, or any other
               industry,
@@ -66,7 +66,7 @@ const LetsTalk = ({ timeline }) => {
         <LineVertical className='line-vertical-top' />
         <LinkWrapper>
           <AnimateMoveUp>
-            <p>Let's talk</p>
+            <p>Let&apos;s talk</p>
           </AnimateMoveUp>
           <AnimateMoveUp>
             <Link href={"/"} target='_blank'>

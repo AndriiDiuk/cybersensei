@@ -123,7 +123,8 @@ const Page = () => {
                     With our team of versatile professionals and a commitment to
                     excellence, we are ready to bring your ideas to life, no
                     matter where they belong in the world of innovation. Contact
-                    us today, and let's embark on a journey of success together.
+                    us today, and let&apos;s embark on a journey of success
+                    together.
                   </ContentDescription>
                 </PageContentWrapper>
                 <DesignElementWrapper>

@@ -67,8 +67,8 @@ const Page = () => {
                     <Paragraph>
                       With a strong focus on real-time performance and risk
                       management, we are experienced in a range of robust
-                      solutions designed to meet the complex needs of today's
-                      financial industry.{" "}
+                      solutions designed to meet the complex needs of
+                      today&apos;s financial industry.{" "}
                     </Paragraph>
                     <Paragraph>
                       Experience includes a real-time P&L tracking system and an
@@ -140,7 +140,7 @@ const Page = () => {
                         This comprehensive tool equips investors with greater
                         transparency, improved operational efficiency, and
                         infinite scalability, ensuring that they can adapt and
-                        thrive in today's dynamic financial landscape.
+                        thrive in today&apos;s dynamic financial landscape.
                       </Paragraph>
                     </TextRowWrapper>
                     <Paragraph>

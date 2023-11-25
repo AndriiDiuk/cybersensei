@@ -70,7 +70,7 @@ const NavbarMenu = ({ isOpen, timeline, handleMenu }) => {
     <StyledWrappers ref={wrapperRef}>
       <DesignWrapper ref={designWrapperRef}>
         <Link href={"/"} ref={linkRef}>
-          <StylesLink>Let's talk</StylesLink>
+          <StylesLink>Let&apos;s talk</StylesLink>
           <div ref={arrowRef}>
             <ArrowLink className='arrow-link' />
           </div>

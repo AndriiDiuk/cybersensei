@@ -106,8 +106,8 @@ const Page = () => {
                       audience.
                     </Paragraph>
                     <Paragraph>
-                      Whether it's iOS, Android, Mac, Windows, Linux, or even
-                      WebAssembly, we have the proficiency to develop
+                      Whether it&apos;s iOS, Android, Mac, Windows, Linux, or
+                      even WebAssembly, we have the proficiency to develop
                       applications that seamlessly run across multiple
                       platforms, enhancing accessibility and user engagement.
                     </Paragraph>

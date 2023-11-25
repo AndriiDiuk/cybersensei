@@ -60,6 +60,7 @@ export const DesignElementWrapper = styled.div`
 export const Navigation = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: ${pxToVw(260)} ${pxToVw(245)};
   width: ${pxToVw(1505)};
 `;

@@ -79,8 +79,8 @@ const Page = () => {
                       solutions that empower businesses and individuals alike.
                     </Paragraph>
                     <Paragraph>
-                      We understand that blockchain is not just a buzzword it's
-                      a transformative force that has the potential to
+                      We understand that blockchain is not just a buzzword
+                      it&apos;s a transformative force that has the potential to
                       revolutionize industries across the globe.
                     </Paragraph>
                     <ImageTextRowWrapper $modifyDetached>
