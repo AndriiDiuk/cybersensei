@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap-trial";
 
-export default function AnimatePict({ children, delay = 0 }) {
+export default function AnimatePict({ children }) {
   const pictRef = useRef(null);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function AnimatePict({ children, delay = 0 }) {
         y: 0,
         scale: 1,
         opacity: 1,
-        delay: delay,
+        delay: 0,
         duration: 1.4,
         scrollTrigger: {
           trigger: pictRef.current,
