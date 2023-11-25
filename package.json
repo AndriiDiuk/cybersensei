@@ -13,7 +13,7 @@
     "gsap": "^3.12.2",
     "gsap-trial": "^3.12.2",
     "locomotive-scroll": "^4.1.4",
-    "next": "14.0.0",
+    "next": "13.4.12",
     "next-locomotive-scroll": "^2.3.2",
     "react": "^18",
     "react-collapse": "^5.1.1",
