@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap-trial";
-import { ScrollTrigger } from "gsap-trial/dist/ScrollTrigger";
 
 export default function index({ children }) {
   const itemRef = useRef(null);
