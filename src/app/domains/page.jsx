@@ -41,7 +41,7 @@ import { useRef } from "react";
 
 const Page = () => {
   const timeline = useTimeLine(true);
-  const scrollContainer = useRef();
+  const scrollContainer = useRef(null);
   useSmoother(scrollContainer);
 
   return (

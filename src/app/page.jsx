@@ -16,7 +16,8 @@ import { useRef } from "react";
 
 export default function Home() {
   const timeline = useTimeLine(true);
-  const scrollContainer = useRef();
+  const scrollContainer = useRef(null);
+
   useSmoother(scrollContainer);
 
   return (

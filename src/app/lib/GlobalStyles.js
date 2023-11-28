@@ -124,7 +124,6 @@ body{
 .ReactCollapse--collapse {
   transition: height 400ms ease-in-out;
 }
-
 `;
 
 export const Wrapper = styled.div`

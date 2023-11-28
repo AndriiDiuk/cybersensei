@@ -55,7 +55,7 @@ const PagesSections = ({ timeline }) => {
               <InfoWrapper $reverse={reverse}>
                 <TitleWrapper>
                   <AnimateTitleLink>
-                    <Link href={link}>
+                    <Link href={link} target='_parent'>
                       <StylesLink>
                         <Title>{name}</Title>
                       </StylesLink>

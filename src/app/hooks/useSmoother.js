@@ -1,5 +1,5 @@
 import useWindowSize from "../hooks/useWindowSize.js";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function useSmoother(scrollContainer) {
   //Hook to grab window size
@@ -8,7 +8,7 @@ export default function useSmoother(scrollContainer) {
   // Configs
   const data = {
     ease: 0.05,
-    current: 0,
+    current: 100,
     previous: 0,
     rounded: 0,
   };
