@@ -41,7 +41,7 @@ export const renderPageImage = (name) => {
           <PictGambling className='pict-gambling' />
         </Wrapper>
       );
-    case "Other domains":
+    case "Domains":
       return (
         <Wrapper>
           <PictDomains className='pict-domains' />
