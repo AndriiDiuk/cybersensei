@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image.js";
-import useSmootherScroll from "../hooks/useSmootherScroll.js";
+import useSmootherScroll from "../hooks/useTimeLine.js";
 import { SmootherContext } from "../utils/smootherContext.js";
 import {
   Wrapper,
@@ -35,103 +35,100 @@ import {
 } from "@/app/components/shared/StylesPageContent.js";
 import Footer from "../components/Footer/Footer.jsx";
 import Header from "../components/Header/Header.jsx";
+import useTimeLine from "../hooks/useTimeLine.js";
+import useSmoother from "../hooks/useSmoother.js";
+import { useRef } from "react";
 
 const Page = () => {
-  const [smoother, timeline] = useSmootherScroll(true);
+  const timeline = useTimeLine(true);
+  const scrollContainer = useRef();
+  useSmoother(scrollContainer);
 
   return (
     <Wrapper>
       <HeaderNavigation timeline={timeline} />
-      <SmootherContext.Provider value={smoother}>
-        <SmootherWrapper id='smooth-wrapper'>
-          <SmootherContent id='smooth-content'>
-            <Header data={dataPages.domains} timeline={timeline} />
-            <Main>
-              <PageContent>
-                <SectionContent>
-                  <PageContentTitleWrapper>
-                    <ContentTitle>
-                      Expertise to implement projects across a wide spectrum of
-                      industries
-                    </ContentTitle>
-                    <ContentDescriptionWrapper>
-                      <Line />
-                      <ContentDescription>
-                        At CyberSense, we are your trusted partner in turning
-                        your innovative ideas into reality.
-                        <br />
-                        <br /> With a team of dedicated professionals who excel
-                        in diverse domains, we have the expertise and
-                        versatility to implement projects across a wide spectrum
-                        of indusytries.
-                      </ContentDescription>
-                    </ContentDescriptionWrapper>
-                  </PageContentTitleWrapper>
-                  <PageContentWrapper>
-                    <Paragraph>
-                      Our commitment to excellence knows no bounds, and we are
-                      ready to tackle challenges in healthcare, insurance,
-                      travel, forensic, embedded systems, automotive, scientific
-                      research, big data analytics, and any other field you can
-                      imagine.
-                    </Paragraph>
-                    <ImageTextRowWrapper>
-                      <ImageWrapper
-                        $imgWidth={pxToVw(780)}
-                        $imgHeight={pxToVw(558)}
-                      >
-                        <Image
-                          src='/page-domains.jpg'
-                          alt='Blockchain'
-                          sizes='100%'
-                          fill
-                        />
-                      </ImageWrapper>
-                    </ImageTextRowWrapper>
-                    <TitleColor>Why Choose Us</TitleColor>
-                    <AdvantagesWrapper>
-                      {dataAdvantagesDomains.map(
-                        ({ title, icon, description }, index) => {
-                          return (
-                            <AdvantageItem key={index}>
-                              <AdvantageTitleWrapper>
-                                {icon
-                                  ? renderPageIconsContent(icon)
-                                  : `${index + 1}.`}
-                                <AdvantageTitle>{title}</AdvantageTitle>
-                              </AdvantageTitleWrapper>
-                              {description.map((item, index) => {
-                                return (
-                                  <Paragraph key={index}>{item}</Paragraph>
-                                );
-                              })}
-                            </AdvantageItem>
-                          );
-                        }
-                      )}
-                    </AdvantagesWrapper>
-                    <ContentDescription>
-                      At CyberSensei, we thrive on challenges, and the domain of
-                      your project is never a limitation for us.
-                      <br />
-                      <br />
-                      With our team of versatile professionals and a commitment
-                      to excellence, we are ready to bring your ideas to life,
-                      no matter where they belong in the world of innovation.
-                      Contact us today, and let&apos;s embark on a journey of
-                      success together.
-                    </ContentDescription>
-                  </PageContentWrapper>
-                  <DesignElementWrapper>
-                    <BgSectionContentBottom />
-                  </DesignElementWrapper>
-                </SectionContent>
-              </PageContent>
-            </Main>
-            <Footer />
-          </SmootherContent>
-        </SmootherWrapper>
-      </SmootherContext.Provider>
+      <SmootherContent ref={scrollContainer}>
+        <Header data={dataPages.domains} timeline={timeline} />
+        <Main>
+          <PageContent>
+            <SectionContent>
+              <PageContentTitleWrapper>
+                <ContentTitle>
+                  Expertise to implement projects across a wide spectrum of
+                  industries
+                </ContentTitle>
+                <ContentDescriptionWrapper>
+                  <Line />
+                  <ContentDescription>
+                    At CyberSense, we are your trusted partner in turning your
+                    innovative ideas into reality.
+                    <br />
+                    <br /> With a team of dedicated professionals who excel in
+                    diverse domains, we have the expertise and versatility to
+                    implement projects across a wide spectrum of indusytries.
+                  </ContentDescription>
+                </ContentDescriptionWrapper>
+              </PageContentTitleWrapper>
+              <PageContentWrapper>
+                <Paragraph>
+                  Our commitment to excellence knows no bounds, and we are ready
+                  to tackle challenges in healthcare, insurance, travel,
+                  forensic, embedded systems, automotive, scientific research,
+                  big data analytics, and any other field you can imagine.
+                </Paragraph>
+                <ImageTextRowWrapper>
+                  <ImageWrapper
+                    $imgWidth={pxToVw(780)}
+                    $imgHeight={pxToVw(558)}
+                  >
+                    <Image
+                      src='/page-domains.jpg'
+                      alt='Blockchain'
+                      sizes='100%'
+                      fill
+                    />
+                  </ImageWrapper>
+                </ImageTextRowWrapper>
+                <TitleColor>Why Choose Us</TitleColor>
+                <AdvantagesWrapper>
+                  {dataAdvantagesDomains.map(
+                    ({ title, icon, description }, index) => {
+                      return (
+                        <AdvantageItem key={index}>
+                          <AdvantageTitleWrapper>
+                            {icon
+                              ? renderPageIconsContent(icon)
+                              : `${index + 1}.`}
+                            <AdvantageTitle>{title}</AdvantageTitle>
+                          </AdvantageTitleWrapper>
+                          {description.map((item, index) => {
+                            return <Paragraph key={index}>{item}</Paragraph>;
+                          })}
+                        </AdvantageItem>
+                      );
+                    }
+                  )}
+                </AdvantagesWrapper>
+                <ContentDescription>
+                  At CyberSensei, we thrive on challenges, and the domain of
+                  your project is never a limitation for us.
+                  <br />
+                  <br />
+                  With our team of versatile professionals and a commitment to
+                  excellence, we are ready to bring your ideas to life, no
+                  matter where they belong in the world of innovation. Contact
+                  us today, and let&apos;s embark on a journey of success
+                  together.
+                </ContentDescription>
+              </PageContentWrapper>
+              <DesignElementWrapper>
+                <BgSectionContentBottom />
+              </DesignElementWrapper>
+            </SectionContent>
+          </PageContent>
+        </Main>
+        <Footer />
+      </SmootherContent>
     </Wrapper>
   );
 };

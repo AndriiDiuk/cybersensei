@@ -93,7 +93,7 @@ h6 {
 }
 
 html {
-	scroll-behavior:smooth;
+	/* scroll-behavior:smooth; */
 	overflow-x: hidden;
 }
 
@@ -128,16 +128,18 @@ body{
 `;
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   overflow: hidden;
-`;
-
-export const SmootherWrapper = styled.div`
+  /* pointer-events: none; */
   will-change: transform;
 `;
 
 export const SmootherContent = styled.div`
+  /* pointer-events: none; */
   will-change: transform;
 `;
 

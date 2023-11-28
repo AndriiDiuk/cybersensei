@@ -130,7 +130,7 @@ export const DesignElementWrapper = styled.div`
     position: absolute;
     width: ${pxToVw(2560)};
     height: ${pxToVw(3454)};
-    top: 0;
+    top: -100px;
     left: 0;
     z-index: -3;
   }

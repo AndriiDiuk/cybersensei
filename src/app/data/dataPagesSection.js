@@ -49,7 +49,7 @@ export const dataPagesSection = [
   {
     id: 5,
     page: {
-      name: "Other domains",
+      name: "Domains",
       link: "/domains",
       description: [
         "Additionally, our company possesses the flexibility and expertise to venture into other domains with the assistance of our or client-side Business Analysis (BA) team. ",
