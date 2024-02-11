@@ -4,10 +4,12 @@
 
 const nextConfig = {
   experimental: {
-    images: true,
+    images: {
+      disableStaticImages: true,
+    },
   },
   trailingSlash: true,
-  output: "export",
+  //   output: "export",
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
