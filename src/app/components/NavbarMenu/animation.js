@@ -7,11 +7,11 @@ gsap.defaults({
 });
 
 export const animateWrapperShow = (wrapperRef) => {
-  return gsap.to(wrapperRef, { right: "0", duration: 0.6, delay: 0.1 });
+  return gsap.to(wrapperRef, { right: "0", duration: 0.6, delay: 0.05 });
 };
 
 export const animateWrapperHidden = (wrapperRef) => {
-  return gsap.to(wrapperRef, { right: "-100vw", duration: 0.2 });
+  return gsap.to(wrapperRef, { right: "-100vw", duration: 0.1 });
 };
 
 export const animateDesignWrapper = (wrapperRef) => {

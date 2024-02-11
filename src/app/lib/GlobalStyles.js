@@ -93,10 +93,14 @@ h6 {
 }
 
 html {
-	/* scroll-behavior:smooth; */
+	scroll-behavior: initial; 
 	overflow-x: hidden;
 }
+html, body, #root { 
+min-height: 100%; 
+height:auto; 
 
+} 
 body{
 
 	font-size:0.703125vw;
@@ -129,9 +133,9 @@ body{
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  /* top: 0; */
+  /* left: 0; */
   overflow: hidden;
   /* pointer-events: none; */
   will-change: transform;
