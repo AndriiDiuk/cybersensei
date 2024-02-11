@@ -1,6 +1,6 @@
 "use client";
 import useTimeLine from "./hooks/useTimeLine.js";
-import { Wrapper, SmootherContent, Main } from "@/app/lib/GlobalStyles.js";
+import { Wrapper, Main } from "@/app/lib/GlobalStyles.js";
 import Header from "./components/Header/Header.jsx";
 import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation.jsx";
 import MainDomainExpertise from "./components/MainDomainExpertise/MainDomainExpertise.jsx";
@@ -11,32 +11,16 @@ import KeyTechnologies from "./components/KeyTechnologies/KeyTechnologies.jsx";
 import TheTeamIsEverything from "./components/TheTeamIsEverything/TheTeamIsEverything.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { dataPages } from "./data/dataPages.js";
-import React, { useEffect, useRef } from "react";
-
-import Lenis from "@studio-freight/lenis";
+import useSmoother from "../app/hooks/useSmoother.js";
+import React from "react";
 
 export default function Home() {
   const timeline = useTimeLine(true);
-  const scrollContainer = useRef(null);
-
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
+  useSmoother();
 
   return (
     <Wrapper>
       <HeaderNavigation timeline={timeline} />
-      {/* <SmootherContent ref={scrollContainer}> */}
       <Header data={dataPages.home} timeline={timeline} />
       <Main>
         <MainDomainExpertise timeline={timeline} />
@@ -47,7 +31,6 @@ export default function Home() {
         <TheTeamIsEverything timeline={timeline} />
       </Main>
       <Footer timeline={timeline} />
-      {/* </SmootherContent> */}
     </Wrapper>
   );
 }

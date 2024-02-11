@@ -36,12 +36,11 @@ import { useRef } from "react";
 const Page = () => {
   const timeline = useTimeLine(true);
   const scrollContainer = useRef();
-  useSmoother(scrollContainer);
+  useSmoother();
 
   return (
     <Wrapper>
       <HeaderNavigation timeline={timeline} />
-      <SmootherContent ref={scrollContainer}>
         <Header data={dataPages.blockchain} timeline={timeline} />
         <Main>
           <PageContent>
